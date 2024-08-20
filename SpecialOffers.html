@@ -295,7 +295,135 @@ body {
     </script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
-			</head>
+			
+<style>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8f9fa, #ececec);
+    color: #333;
+    transition: background 0.5s ease;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Flexbox and Grid Layout with Transitions */
+#main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    width: calc(33% - 40px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover img {
+    opacity: 0.85;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Button Styling with Hover Effects */
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.boxcontainer{
+
+  padding: 0px;
+  margin: 0px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 
+              0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.boxcontainer:hover{
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 
+              0 12px 40px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+</style>
+</head>
 <body class="site com_content view-featured no-layout no-task itemid-104 ">
 
 		<div id="slideout" style="display:none;" class="slideout-menu slideout-menu-left">
@@ -371,7 +499,8 @@ body {
     
                                                             <div class="blog-items  masonry-3">
                     <div class="blog-item">
-                    
+    
+                        <div class = "boxcontainer">  
 <figure class="Top item-image">
             <img src="./Special Offers_files/pexels-dana-tentis-118658-750073.jpg" width="4608" height="3072" loading="lazy">        </figure>
 
@@ -382,13 +511,12 @@ body {
     
         
         
-        
-        
+ 
     <p style="text-align: center;"><span style="font-size: 24px; font-family: &#39;book antiqua&#39;, palatino, serif;"><strong>Chicken Burger with Potato Chips</strong></span></p>
 <p style="text-align: center;"><strong><span style="font-family: &#39;times new roman&#39;, times, serif;">Price:&nbsp; 800.00 LKR&nbsp; &nbsp; </span></strong><span style="font-family: &#39;times new roman&#39;, times, serif;"><s>1300.00 LKR</s></span></p>
 <p style="text-align: center;"><strong><span style="font-family: &#39;times new roman&#39;, times, serif;">Category: Evening / Dinner</span></strong></p>
 
-    
+</div> 
     
         
 <p class="readmore">
@@ -402,6 +530,7 @@ body {
 
             </div>
                     <div class="blog-item">
+                        <div class = "boxcontainer">
                     
 <figure class="Top item-image">
             <img src="./Special Offers_files/pexels-vanmalidate-769289.jpg" width="2048" height="1365" loading="lazy">        </figure>
@@ -429,19 +558,22 @@ body {
 
     
     
-</div>
+</div></div>
 
             </div>
+                        
+<div class = "boxcontainer">
                     <div class="blog-item">
                     
-<figure class="Top item-image">
+ <div class="item-content">
+
+                        <figure class="Top item-image">
             <img src="./Special Offers_files/pexels-grizzlybear-1166120.jpg" width="3008" height="2000" loading="lazy">        </figure>
 
 <div class="item-content">
     
     
-            
-    
+
         
         
         
@@ -457,12 +589,13 @@ body {
             <a class="btn btn-secondary" href="./index.php/menu-list?view=article&amp;id=11:milkrice-2&amp;catid=11" aria-label="Read more: Cheese Pizza">
             <span class="icon-chevron-right" aria-hidden="true"></span>            Read more: Cheese Pizza        </a>
     </p>
-
-    
+</div>
+</div>
     
 </div>
 
-            </div>
+            </div><br>
+            <div class = "boxcontainer">
                     <div class="blog-item">
                     
 <figure class="Top item-image">
@@ -492,10 +625,13 @@ body {
     
     
 </div>
+</div>
 
             </div>
+
                     <div class="blog-item">
                     
+                        <div class = "boxcontainer">
 <figure class="Top item-image">
             <img src="./Special Offers_files/pexels-narda-yescas-724842-1566837.jpg" width="4928" height="3264" loading="lazy">        </figure>
 
@@ -522,11 +658,12 @@ body {
 
     
     
-</div>
+</div></div>
 
             </div>
                     <div class="blog-item">
                     
+                        <div class = "boxcontainer">
 <figure class="Top item-image">
             <img src="./Special Offers_files/pexels-enginakyurt-1437267.jpg" width="6589" height="4395" loading="lazy">        </figure>
 
@@ -553,7 +690,7 @@ body {
 
     
     
-</div>
+</div></div>
 
             </div>
                 </div>
@@ -613,7 +750,7 @@ body {
 		
 		<footer id="container_footer">
 													<div class="copyright">
-				<p>(c) 2022 Your Copyright Info</p>
+				<p>(c) 2024 All Right Reserved</p>
 			</div>
 		</footer>
 		
@@ -629,4 +766,58 @@ body {
 
 
  
+
+<script>
+// Add smooth scroll to links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Add animations on scroll for cards
+window.addEventListener('scroll', function () {
+    document.querySelectorAll('.card').forEach(card => {
+        let cardPosition = card.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.3;
+
+        if (cardPosition < screenPosition) {
+            card.classList.add('fadeIn');
+        } else {
+            card.classList.remove('fadeIn');
+        }
+    });
+});
+
+// Background color transition on scroll
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition > 300) {
+        document.body.style.background = "#ececec";
+    } else {
+        document.body.style.background = "linear-gradient(135deg, #f8f9fa, #ececec)";
+    }
+});
+</script>
+
+<style>
+/* Animation for cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+</style>
 </body></html>
